@@ -1,0 +1,5 @@
+#
+# Alias file created: Feb 3, 2014  4:10 PM
+# 
+TITLE /mnt/storage/storage1/public_wheat/IWGSC/survey_sequences_2013-06/fasta/all.fasta
+DBLIST /var/tomcat/persist/iwgsc_blastdb/IWGSC_SS.00 /var/tomcat/persist/iwgsc_blastdb/IWGSC_SS.01 /var/tomcat/persist/iwgsc_blastdb/IWGSC_SS.02
