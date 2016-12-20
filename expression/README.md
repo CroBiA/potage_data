@@ -6,7 +6,7 @@ on what data files are required and how to specify a configuration file for use 
 To help keep things organised, we advise the use of a subdirectory for each gene expression data set. If you have multiple
 data sets, they will be displayed within the POTAGE interface in the order in which the directory's are listed. Therefore,
 it is advisable to prefix the data set's subdirectory name with a 3-digit number. For example, the IWGSC public RNA-Seq
-data set which comes with POTAGE is placed in the [expression/001_iwgsc/](expression/001_iwgsc/) subdirectory; ensuring that it will apprear first in the POTAGE interface.
+data set which comes with POTAGE is placed in the [`001_iwgsc`](001_iwgsc) subdirectory; ensuring that it will apprear first in the POTAGE interface.
 
 The following sections describe the files required for each data set and should be placed into the data set's subdirectory.
  
