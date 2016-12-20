@@ -1,0 +1,5 @@
+#!/bin/bash
+# A simple wrapper script to call make for downloading, processing and formatting the IWGSC CSS FASTA files for BLAST.
+# Use the value of BLAST_DB from potage.cfg file to set the location of where the FASTA files are to be saved.
+TARGET_DIR=$(fgrep BLAST_DB potage.cfg | sed 's@BLAST_DB\s\+@@; s@[^/]\+$@@')
+make -f setup_db.Makefile --jobs --directory "${0%/*}" TARGET_DIR="${TARGET_DIR}" "$@"
