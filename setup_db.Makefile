@@ -65,5 +65,5 @@ $(TARGET_DIR)IWGSC_SS.nal: $(foreach file,$(IWGSC_FILES),$(addprefix $(TARGET_DI
 	gunzip -c $< | makeblastdb -in - -dbtype nucl -title "$(notdir $<)" -parse_seqids -out "$<"
 
 %.gz :
-	file="$(notdir $@)" && chr_arm="$${file//[-_]*}" && curl "$(BASE_URL)$(notdir $@)" | gunzip | sed "s/^>/>$${chr_arm}_/" | gzip --fast > "$@"
+	file="$(notdir $@)" && chr_arm="$${file//[-_]*}" && curl "$(BASE_URL)$(notdir $@)" | gunzip | sed "s/^>\($${chr_arm}_\)\?/>$${chr_arm}_/" | gzip --fast > "$@"
 
