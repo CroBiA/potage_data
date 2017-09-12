@@ -42,11 +42,11 @@ All characters following the first group of 1 or more white-space charaters on n
 values can contain white-space; strings should not be enclosed in quotes.
 
 
-# Adding more data sets
+# Adding expression data sets
 
-Here we present an example workflow for including additional RNA-Seq datasets in POTAGE. We omit the read QC and alignment steps. We assume the user is able to generate a valid BAM file per data point which is to be displayed in POTAGE. The appropriate reference for aligning the reads when using a splice-aware aligner is `MiPS_genes_PlusMinus2kb_allTranscripts__AND__HCS_UNMAPPED_CDS.fasta`. 
+Here we present an example workflow for including additional RNA-Seq datasets in POTAGE. We omit the read QC and alignment steps. We assume the user is able to generate a valid BAM file per data point which is to be displayed in POTAGE. The appropriate reference for aligning the reads when using a splice-aware aligner is `MiPS_genes_PlusMinus2kb_allTranscripts__AND__HCS_UNMAPPED_CDS.fasta.gz` (TO BE ADDED To REPO). 
 
-Alternatively the user may resort to aligning their reads to [transcripts](ftp://ftpmips.helmholtz-muenchen.de/plants/wheat/IWGSC/genePrediction_v2.1/ta_IWGSC_MIPSv2.1_HCS_CDS_2013Nov28.fa.gz) , or even quantify the expression values using an alignment-free approach such as [Salmon](https://combine-lab.github.io/salmon/) or [kallisto](https://pachterlab.github.io/kallisto/). 
+Alternatively the user may resort to aligning their reads to [transcripts](ftp://ftpmips.helmholtz-muenchen.de/plants/wheat/IWGSC/genePrediction_v2.1/ta_IWGSC_MIPSv2.1_HCS_CDS_2013Nov28.fa.gz), or even quantify the expression values using an alignment-free approach such as [Salmon](https://combine-lab.github.io/salmon/) or [kallisto](https://pachterlab.github.io/kallisto/). 
 
 We include some of the settings used for aligning RNA-Seq reads from the [Meiosis](https://www.ncbi.nlm.nih.gov/bioproject/PRJEB5029) dataset 
 
@@ -111,15 +111,21 @@ In the case of Chinese Spring [Meiosis](https://www.ncbi.nlm.nih.gov/bioproject/
 
 ## Create a simple configuration file describing the data set
 
-For example, for the Chinese Spring Meiosis dataset we need
+For example, for the Chinese Spring Meiosis dataset `config.cfg` might look as follows:
 
         #Expression dataset configuration
         ShortName Mei
         LongName  Chinese Spring - Meiosis
         Unit      FPKM
-        FileName  meiose.tsv
+        FileName  data_points_expression.tsv
 
+## Make files available to your POTAGE instance and re-load the web-app
 
+POTAGE picks up the expression data sets from a directory specified in `potage.cfg`., by default this is `expression`. For an additional dataset to be loaded into POTAGE we create a new sub-directory under `expression`, for example:
+
+        mkdir expression/002_meiose
+
+We then place the file with expression values (`data_points_expression.tsv`) and the data set configuration file `config.cfg` in the newly created sub directory
 
 
 
