@@ -106,7 +106,7 @@ In the case of Chinese Spring [Meiosis](https://www.ncbi.nlm.nih.gov/bioproject/
           s=${d##*/}
           printf "\t${s}" >> header.txt
         done
-        cat header.txt <(printf '\n') <(tail -n +2 genes.joined) > data_points_expression.tsv 
+        cat header.txt <(printf '\n') <(tail -n +2 genes.joined) > meiose.tsv 
 
 
 ## Create a simple configuration file describing the data set
@@ -117,7 +117,7 @@ For example, for the Chinese Spring Meiosis dataset `config.cfg` might look as f
         ShortName Mei
         LongName  Chinese Spring - Meiosis
         Unit      FPKM
-        FileName  data_points_expression.tsv
+        FileName  meiose.tsv
 
 ## Make files available to your POTAGE instance and re-load the web-app
 
