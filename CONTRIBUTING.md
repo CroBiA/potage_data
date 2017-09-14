@@ -77,8 +77,8 @@ For example, for the Chinese Spring Meiosis dataset `config.cfg` might look as f
 
 ## Make files available to your POTAGE instance and re-load the web-app
 
-POTAGE picks up the expression data sets from a directory specified in `potage.cfg`., by default this is `expression`. For an additional dataset to be loaded into POTAGE we create a new sub-directory under `expression`, for example:
+POTAGE picks up the expression data sets from a directory specified in `potage.cfg`, by default this is `expression`. For an additional dataset to be loaded into POTAGE we create a new sub-directory under `expression`, for example:
 
         mkdir expression/002_meiose
 
-We then place the file with expression values (`meiose.tsv`) and the data set configuration file `config.cfg` in the newly created sub directory
+We then place the file with expression values (`meiose.tsv`) and the data set configuration file `config.cfg` in the newly created sub-directory
