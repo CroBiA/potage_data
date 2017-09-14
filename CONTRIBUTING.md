@@ -1,6 +1,6 @@
 # Adding expression data sets
 
-Here we present an example workflow for including additional RNA-Seq datasets in POTAGE. We omit the read QC and alignment steps. We assume the user is able to generate a valid BAM file per data point which is to be displayed in POTAGE. The appropriate reference for aligning the reads when using a splice-aware aligner is `MiPS_genes_PlusMinus2kb_allTranscripts__AND__HCS_UNMAPPED_CDS.fasta.gz` (TO BE ADDED To REPO). 
+Here we present an example workflow for including additional RNA-Seq datasets in POTAGE. We omit the read QC and alignment steps. We assume the user is able to generate a valid BAM file per data point which is to be displayed in POTAGE. The appropriate reference for aligning the reads when using a splice-aware aligner is `MiPS_genes_PlusMinus2kb_allTranscripts__AND__HCS_UNMAPPED_CDS.fasta.gz` (TO BE ADDED TO REPO). 
 
 Alternatively the user may resort to aligning their reads to [transcripts](ftp://ftpmips.helmholtz-muenchen.de/plants/wheat/IWGSC/genePrediction_v2.1/ta_IWGSC_MIPSv2.1_HCS_CDS_2013Nov28.fa.gz), or even quantify the expression values using an alignment-free approach such as [Salmon](https://combine-lab.github.io/salmon/) or [kallisto](https://pachterlab.github.io/kallisto/). 
 
@@ -81,4 +81,4 @@ POTAGE picks up the expression data sets from a directory specified in `potage.c
 
         mkdir expression/002_meiose
 
-We then place the file with expression values (`data_points_expression.tsv`) and the data set configuration file `config.cfg` in the newly created sub directory
+We then place the file with expression values (`meiose.tsv`) and the data set configuration file `config.cfg` in the newly created sub directory
