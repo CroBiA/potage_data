@@ -1,3 +1,10 @@
+There are two major data components to POTAGE:
+
+  1. [Global](./global) - the core precomputed information on which POTAGE is built
+  2. [Expression](./expression) - the gene expression data sets for visualisation within POTAGE
+
+You are most likely to want to add additional gene expression data sets to POTAGE, so we describe here the process for doing so.
+
 # Adding expression data sets
 
 Here we present an example workflow for including additional RNA-Seq datasets in POTAGE. We omit the read QC and alignment steps. We assume the user is able to generate a valid BAM file per data point which is to be displayed in POTAGE. The appropriate reference for aligning the reads when using a splice-aware aligner is `MiPS_genes_PlusMinus2kb_allTranscripts__AND__HCS_UNMAPPED_CDS.fasta.gz` (TO BE ADDED TO REPO). 
