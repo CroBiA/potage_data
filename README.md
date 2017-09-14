@@ -1,4 +1,4 @@
-This repository houses the data components used by the public POTAGE web server (http://crobiad.agwine.adelaide.edu.au/potage).
+This repository houses the data components used by the public [POTAGE](https://github.com/CroBiAd/potage) web server (http://crobiad.agwine.adelaide.edu.au/potage).
 
 There are two major data components to POTAGE:
 
