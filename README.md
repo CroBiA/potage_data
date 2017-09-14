@@ -1,12 +1,11 @@
 This repository houses the data components used by the public [POTAGE](https://github.com/CroBiAd/potage) web server (http://crobiad.agwine.adelaide.edu.au/potage).
 
-This information is relevant for those seeking to add unpublished gene expression data sets to their [own POTAGE instance](https://github.com/CroBiAd/potage#running-potage-locally) or wish to contribute a published gene expression dataset to the community of POTAGE users.
+# Intended Audiance
 
-There are two major data components to POTAGE:
+This information is relevant for those seeking to:
 
-  1. [Global](./global) - the core precomputed information on which POTAGE is built
-  2. [Expression](./expression) - the gene expression data sets for visualisation within POTAGE
-
+  1. Add unpublished gene expression data sets to their [own POTAGE instance](https://github.com/CroBiAd/potage#running-potage-locally)
+  2. Would like to contribute a published gene expression dataset back to the community of POTAGE users.
 
 # Contributing Gene Expression Data Sets to POTAGE
 
